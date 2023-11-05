@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | ConnexIon</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #FFFFFF;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    height: 55px;
+    width: 245px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a:hover{
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: orange;
+    color: black;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logoclass:hover{
+    padding: 0px;
+    border-radius: 0px;
+    background-color: #FFFFFF;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    transform-origin: right center;
+}
+
+/* Define animation keyframes */
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Apply animation to .bar elements with delay */
+.menu-toggle.active .bar:nth-child(1) {
+    animation: slideIn 0.3s ease forwards 0.1s;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    animation: slideIn 0.3s ease forwards 0.2s;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    animation: slideIn 0.3s ease forwards 0.3s;
+}
+
+
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #FFFFFF;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .logoclass:hover {
+        padding: 0;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+    
+    .nav-list li {
+        margin: 0;
+        padding: 15px 0;
+    }
+    .nav-list li:hover{
+      background-color: orange;
+        margin: 0;
+        padding: 15px 15px;
+    }
+
+    .nav-list a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .nav-list a:hover {
+        background-color: orange;
+        color: black;
+    }
+}
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.project {
+    width: 27%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.project h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.project p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.projectheader{
+    background-size: cover;
+    color: #f9f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    text-align: center;
+    background-image: url('images/projectback.png');
+}
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .project {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.fa-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fa-ul li {
+    margin-bottom: 10px;
+}
+
+.fa-ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.fa-ul li a i {
+    margin-right: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media,
+    .social-media:last-child {
+        margin-right: 0; /* Remove margin for the last social media item */
+    }
+}
+
+
+
+
+
+
+  
+
+    </style>
+</head>
+<body>
+    <nav>
+      <div class="logo">
+        <a class="logoclass" href="index.html"><img src="images/1920x1440_Connexion_White.png" alt="Your club logo" style="height: 58px; width: 195px;"></a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <!-- <li><a href="memebers.html">Core Team</a></li> -->
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    
+    <div style="background-color: rgb(230, 220, 220); color: rgb(252, 10, 10); width: 100%; font-size: larger; padding-top: 8px; padding-bottom: 8px;">
+        
+      <marquee style="font-weight: bold;" behavior="scroll" direction="left">Coming Soon!!!</marquee>
+
+    </div>
+	<header class="projectheader">
+		<h1>Our Projects</h1>
+		<p>Check out some of the amazing projects our members have been working on!</p>
+	</header>
+	<section class="projects">
+	
+    
+		<div class="project" >
+			<h2>Industrial Water Management System</h2>
+			<img style="height: 40.25vh;" src="images/project1.webp" alt="Project 2">
+			<p style="margin-bottom: 10px; margin-top: 4px;"> The IoT gives increased access to control of smart devices. Sensors on these smart devices measure certain types of data. Design an IoT-enabled system that will manage digitilaise the water usage. Use low-cost hardware to interface with sensors, collect the data on the cloud and determine when and how the industriers conusmed watered.</p>
+		</div>
+		<div class="project">
+			<h2>Factory-Verified Vehicle Access Control System</h2>
+			<img style="height: 40vh; margin-top: 6px; margin-bottom: 3px;" src="images/project2.jpg" alt="Project 3">
+			<p style="margin-top: 7px;">Factories send their goods vehicles out for transporting which gets checked at the check post of the economic zone to ensure verified vehicle access. This will be implemented by digitalising the verification and establishing a portal where factories can enter their vehicles and metadata which will then be automatically identified at the check post.</p>
+		</div>
+
+    <div class="project">
+      
+			<h2>Smart Healthcare Monitoring System</h2>
+			<img  src="images/project3.webp" alt="Project 1">
+			<p> Developing a system every village panchayat office will have a system where each person in the village will come in his designated time slot to the office to check and log the below parameters using the sensor subsystems attached. With this the patient can predict the type of didease and the required list of medicines. 
+.</p>
+		</div>
+	</section>
+	<footer>
+        <div class="footer-grid">
+          <div class="social-media">
+            <h2>Follow us on social media:</h2>
+            <ul class="fa-ul">
+              <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+              <!-- <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-twitter"></i>Twitter</a></li> -->
+              <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ=="><i class="fa fa-instagram"></i>Instagram</a></li>
+              <!-- <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ==" ><i class="fa fa-facebook"></i>Facebook</a></li> -->
+            </ul>
+          </div>
+          <div class="social-media">
+            <h2>Contact Us:</h2>
+            <ul class="fa-ul">
+              <li><a target="_blank" href="mailto:iot.club@iiits.in"><i class="fa fa-envelope"></i>iot.club@iiits.in</a></li>
+<!--               <li><a href="#"><i class="fa fa-phone"></i>+91 8093823499</a></li> -->
+            <li><a target="_blank" href="https://www.iiits.ac.in/internet-of-things-club/"><i class="fa fa-map-marker"></i>IIIT Sri City</a></li>
+            </ul>
+          </div>
+          <a style="margin-top: 70px;" target="_blank" href="https://www.iiits.ac.in/internet-of-things-club/"><img src="images/clglogo.png" alt="IIIT SRICITY" style="height: 125px; width: 125px;"></a>
+
+        </div>
+        <p style="margin-top: 10px;">&copy; 2023 ConnexIon Club. All rights reserved.</p>
+
+      </a>
+      </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

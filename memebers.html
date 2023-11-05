@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Team | ConnexIon</title>
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #FFFFFF;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    height: 55px;
+    width: 245px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a:hover{
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: orange;
+    color: black;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logoclass:hover{
+    padding: 0px;
+    border-radius: 0px;
+    background-color: #FFFFFF;
+}
+
+/* Styles for the menu toggle button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: all 0.3s ease; /* Add transition properties for smooth animation */
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #FFFFFF;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .logoclass:hover {
+        padding: 0;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+    
+    .nav-list li {
+        margin: 0;
+        padding: 15px 0;
+    }
+    .nav-list li:hover{
+      background-color: orange;
+        margin: 0;
+        padding: 15px 15px;
+    }
+
+    .nav-list a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .nav-list a:hover {
+        background-color: orange;
+        color: black;
+    }
+}
+
+
+.coreteam{
+    background-size: cover;
+    color: #f9f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    text-align: center;
+    background-image: url("images/coreteamback.avif")
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-wrap: wrap;
+    width: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow: 2px 8px 10px rgba(39, 37, 37, 0.1);
+    text-align: center;
+}
+
+
+.card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin: 5px 0;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+
+.mentor {
+    margin-bottom: 50px;
+}
+
+.mentor h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.mentor-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.mentor-image {
+    width: 200px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.mentor-image img {
+    width: 100%;
+}
+
+.mentor-details {
+    width: 60%;
+}
+
+.mentor-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mentor-details p {
+    margin-bottom: 10px;
+}/* CSS for Club Mentor section */
+.events {
+    text-align: center;
+    
+   margin-left: 270px;
+    padding: 20px;
+    
+
+    max-width: 600px;
+}
+
+.event-card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event-image img {
+    width: 190px;
+    height: 250px;
+    margin-right: 10px;
+    
+}
+
+.event-details1 {
+    text-align: center;
+}
+
+.event-details1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-details1 p {
+    margin-bottom: 8px;
+}
+
+.event-details1 b {
+    font-weight: bold;
+}
+
+.event-details1 i {
+    margin-right: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .events {
+        margin: 20px auto;
+      
+    }
+
+    .event-card1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-image img {
+        width: 150px;
+        height: 200px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .event-details1 {
+        text-align: center;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.fa-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fa-ul li {
+    margin-bottom: 10px;
+}
+
+.fa-ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.fa-ul li a i {
+    margin-right: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media,
+    .social-media:last-child {
+        margin-right: 0; /* Remove margin for the last social media item */
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a class="logoclass" href="index.html"><img src="images/1920x1440_Connexion_White.png" alt="Your club logo" style="height: 58px; width: 195px;"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="memebers.html">Core Team</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+    <div style="background-color: rgb(230, 220, 220); color: rgb(252, 10, 10); width: 100%; font-size: larger; padding: 8px;">
+        
+      <marquee style="font-weight: bold;" behavior="scroll" direction="left">Comming Soon!!!</marquee>
+
+    </div>
+    <header class="coreteam">
+      <h1>Core Team</h1>
+      <p>Forging lifelong connections and fostering success beyond graduation.</p>
+    </header>
+    
+   
+    <h2 style="text-align: center; font-size: 35px; font-weight: bold; color: #333;  margin-top: 40px; ">Club Mentor</h2>
+    <div style="margin-left: 150px; margin-right: 100px;">
+    <section class="events" style="  box-shadow:0px 0px 4px 4px #fffefe;">
+        
+        <div style="margin-left: 5opx; margin-left: 5opx;" class="event-card1">
+          
+          <div class="row">
+            <div class="event-image">
+              <img src="images/mentor.jpg" alt="Club Mentor" style="margin-left:50px; margin-right: 10px; width: 190px; height: 250px; margin-top: 45px; ">
+            </div>
+
+            <div class="event-details1">
+              <h2>Dr. Raja Vara Prasad Yerra</h2>
+              <p>Assistant Professor</p>
+              <p>Ph. D. (Indian Institute of Technology Hyderabad, India)</p>
+              <p><b>Research Areas: </b>Wireless Sensor and Actuator Networks (WSAN), 
+                Protocols for Internet of Things (IoT), Digital Twins, Unmanned Aerial Vehicles (UAVs), 
+                Sensor Fusion: WSN and Computer Vision (CV)</p>
+                <p><i class="fa fa-envelope"></i>&emsp14; yrv.prasad@iiits.in</p>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+  
+ 
+  <section class="mentor">
+    <h2 style="text-align: center; font-size: 35px; font-weight: bold; color: #333;  margin-top: 30px; ">Core Members</h2>
+ 
+  </section>
+  <div class="card-container">
+	
+
+<div class="card">
+    <img src="images/AsstClubHead.jpg" alt="Member 2" class="card-img">
+    <div class="card-content">
+        <h2>Sai Sreyas Nilgiri</h2>
+        <p>Club Head</p>
+        <p><i class="fa fa-envelope"></i> saisreyas.n20@iiits.in</p>
+    </div>
+</div>
+
+
+<div class="card">
+  <img src="images/CoreMember2.jpg" alt="Member 4"  class="card-img">
+  <div class="card-content">
+      <h2>Kannan M</h2>
+      <p> Assistant Club Head</p>
+      <p><i class="fa fa-envelope"></i> kannan.m21@iiits.in</p>
+  </div>
+</div>
+<div class="card">
+  <img src="images/CoreMember3.jpg" alt="Member 5" class="card-img">
+  <div class="card-content">
+      <h2>Eswar Yalakanti</h2>
+      <p>Core Member</p>
+      <p><i class="fa fa-envelope"></i> eswar.y21@iiits.in</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/CCmember1.jpg" alt="Member 6" class="card-img">
+  <div class="card-content">
+      <h2>Adi Narayana Reddy Mallala</h2>
+      <p>Core Member</p>
+      <p><i class="fa fa-envelope"></i> adinarayanareddy.m21@iiits.in</p>
+  </div>
+</div>
+<div class="card">
+  <img src="images/CCmember2.jpg" alt="Member 7" class="card-img">
+  <div class="card-content">
+      <h2>T. Veera Manikantha Rayudu</h2>
+      <p>Core Member</p>
+      <p><i class="fa fa-envelope"></i>  manikantharayudu.t21@iiits.in</p>
+  </div>
+</div>
+
+</div>
+<footer>
+  <div class="footer-grid">
+    <div class="social-media">
+      <h2>Follow us on social media:</h2>
+      <ul class="fa-ul">
+        <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+        <!-- <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-twitter"></i>Twitter</a></li> -->
+        <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ=="><i class="fa fa-instagram"></i>Instagram</a></li>
+        <!-- <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ==" ><i class="fa fa-facebook"></i>Facebook</a></li> -->
+      </ul>
+    </div>
+    <div class="social-media">
+      <h2>Contact Us:</h2>
+      <ul class="fa-ul">
+        <li><a target="_blank" href="mailto:iot.club@iiits.in"><i class="fa fa-envelope"></i>iot.club@iiits.in</a></li>
+<!--               <li><a href="#"><i class="fa fa-phone"></i>+91 8093823499</a></li> -->
+      <li><a target="_blank" href="https://www.iiits.ac.in/internet-of-things-club/"><i class="fa fa-map-marker"></i>IIIT Sri City</a></li>
+      </ul>
+    </div>
+    <a style="margin-top: 70px;" target="_blank" href="https://www.iiits.ac.in/"><img src="images/clglogo.png" alt="IIIT SRICITY" style="height: 125px; width: 125px;"></a>
+
+  </div>
+  <p style="margin-top: 10px;">&copy; 2023 ConnexIon Club. All rights reserved.</p>
+
+</a>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+navList.classList.toggle('active');
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnexIon</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+          body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #FFFFFF;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    height: 55px;
+    width: 245px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a:hover{
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: orange;
+    color: black;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logoclass:hover{
+    padding: 0px;
+    border-radius: 0px;
+    background-color: #FFFFFF;
+}
+
+/* Styles for the menu toggle button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: all 0.3s ease; /* Add transition properties for smooth animation */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #FFFFFF;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .logoclass:hover {
+        padding: 0;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+    
+    .nav-list li {
+        margin: 0;
+        padding: 15px 0px;
+    }
+    
+    .nav-list li:hover{
+      background-color: orange;
+        margin: 0;
+        padding: 15px 15px;
+    }
+
+    .nav-list a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .nav-list a:hover {
+        background-color: orange;
+        color: black;
+    }
+}
+
+/* General styles for sections */
+.background-video {
+    margin-top: 1px;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adoutaim {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about, .aim {
+    flex: 0 0 45%; /* Each section takes 45% of the available space */
+    max-width: 600px;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(238, 202, 208);
+}
+.about{
+  padding-top: 16px;
+  padding-bottom: 34px;
+}
+
+.h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pa {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.ula {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .background-video {
+        height: 40vh;
+    }
+
+    .adoutaim, .about, .aim {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .h2 {
+        font-size: 1.5rem;
+    }
+
+    .pa {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .ula {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-video {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .adoutaim, .about, .aim {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .h2 {
+        font-size: 1.2rem;
+    }
+
+    .pa {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .ula {
+        margin-left: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .adoutaim {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about, .aim {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.fa-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fa-ul li {
+    margin-bottom: 10px;
+}
+
+.fa-ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.fa-ul li a i {
+    margin-right: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media,
+    .social-media:last-child {
+        margin-right: 0; /* Remove margin for the last social media item */
+    }
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a class="logoclass" href="index.html"><img src="images/1920x1440_Connexion_White.png" alt="Your club logo" style="height: 58px; width: 195px;"></a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <!-- <li><a href="memebers.html">Core Team</a></li> -->
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div style="background-color: rgb(230, 220, 220); color: rgb(252, 10, 10); width: 100%; font-size: larger; padding: 8px;">
+        
+        <marquee style="font-weight: bold;" behavior="scroll" direction="left">Comming Soon!!!</marquee>
+
+      </div>
+    </header>
+        <section class="background-video" style="margin-top: 1px; height: 81vh;">
+            <video autoplay loop muted>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          
+        </section>
+ 
+    <div class="adoutaim">
+    <section class="about">
+      <h2 class="h2">About Us</h2>
+      <p style="font-size: 16px;" class="pa">ConnexIon is one of the technical clubs of IIIT Sri City which revolves mostly around IoT & Embedded systems. This is an initiative taken to encourage students in IoT & other related fields. 
+        <br> <br> Members of the club do take part in real time projects based on IoT and other related domains which can help them in developing new skills and gaining knowledge in a more practical way. This will also encourage peer to peer learning among the students.</p>
+    </section>
+    <section class="aim">
+      <h2 class="h2">Our Aim</h2>
+      <ul class="ula">
+        <li>The main motto of this club is to help students gain more practical knowledge through some hands on sessions, projects and Seminars.</li>
+        <li>To let students work and learn about various hardware like Arduino, Raspberry Pi, NodeMCU, Sensors, Actuators etc and gain new skills</li>
+        <li>Host some guest lectures by the professor from the institute or other organisations which can help students understand the industry level Aspect and current progress.</li>
+        <li>To represent the college through the club in any technical event.</li>
+      </ul>
+    </section>
+  </div>
+  
+    <footer>
+      <div class="footer-grid">
+        <div class="social-media">
+          <h2>Follow us on social media:</h2>
+          <ul class="fa-ul">
+            <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+            <!-- <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-twitter"></i>Twitter</a></li> -->
+            <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ=="><i class="fa fa-instagram"></i>Instagram</a></li>
+            <!-- <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ==" ><i class="fa fa-facebook"></i>Facebook</a></li> -->
+          </ul>
+        </div>
+        <div class="social-media">
+          <h2>Contact Us:</h2>
+          <ul class="fa-ul">
+            <li><a target="_blank" href="mailto:iot.club@iiits.in"><i class="fa fa-envelope"></i>iot.club@iiits.in</a></li>
+<!--               <li><a href="#"><i class="fa fa-phone"></i>+91 8093823499</a></li> -->
+          <li><a target="_blank" href="https://www.iiits.ac.in/internet-of-things-club/"><i class="fa fa-map-marker"></i>IIIT Sri City</a></li>
+          </ul>
+        </div>
+        <a style="margin-top: 70px;" target="_blank" href="https://www.iiits.ac.in/internet-of-things-club/"><img src="images/clglogo.png" alt="IIIT SRICITY" style="height: 125px; width: 125px;"></a>
+
+      </div>
+      <p style="margin-top: 10px;">&copy; 2023 ConnexIon Club. All rights reserved.</p>
+
+    </a>
+    </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    
+      const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+      </script>
+</body>
+</html>
