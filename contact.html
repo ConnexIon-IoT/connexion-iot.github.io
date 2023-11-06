@@ -76,43 +76,37 @@ nav a {
     background-color: black;
     margin: 3px 0;
     transition: all 0.3s ease; /* Add transition properties for smooth animation */
-    animation: slideIn 0.5s ease; /* Add slideIn animation for initial load */
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-20px); /* Initial position off-screen */
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0); /* Final position */
-        opacity: 1;
-    }
-}
-/* ... (previous CSS rules) ... */
-
-/* Media queries for responsive design */
 
 
+/* ... (your existing CSS code) ... */
+
+
+
+/* ... (your existing CSS code) ... */
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
-    .nav-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 70px;
-        right: -100%; /* Initial position off-screen */
-        background-color: #FFFFFF;
-        z-index: 1;
-        transition: right 0.5s ease; /* Add transition for smooth sliding animation */
-    }
+   /* Styles for the menu list */
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #FFFFFF;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease; /* Add transition for smooth animation */
+}
 
-    .nav-list.active {
-        right: 0; /* Final position */
-    }
+.nav-list.active {
+    max-height: 300px; /* Set the max-height to the desired height of the menu */
+}
 
 
     .menu-toggle {
