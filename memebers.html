@@ -59,6 +59,10 @@ nav a {
     background-color: #FFFFFF;
 }
 
+
+
+
+
 /* Styles for the menu toggle button */
 .menu-toggle {
     display: none;
@@ -72,27 +76,44 @@ nav a {
     background-color: black;
     margin: 3px 0;
     transition: all 0.3s ease; /* Add transition properties for smooth animation */
+    animation: slideIn 0.5s ease; /* Add slideIn animation for initial load */
 }
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-20px); /* Initial position off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Final position */
+        opacity: 1;
+    }
+}
+/* ... (previous CSS rules) ... */
+
+/* Media queries for responsive design */
+
 
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     .nav-list {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         text-align: center;
         position: absolute;
         top: 70px;
-        left: 0;
+        right: -100%; /* Initial position off-screen */
         background-color: #FFFFFF;
         z-index: 1;
-        transition: all 0.3s ease;
+        transition: right 2s ease; /* Add transition for smooth sliding animation */
     }
 
     .nav-list.active {
-        display: flex;
+        right: 0; /* Final position */
     }
+
 
     .menu-toggle {
         display: flex;
