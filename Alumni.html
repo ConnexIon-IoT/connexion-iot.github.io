@@ -566,7 +566,29 @@ body {
   
 }
 
-headin
+/* Add animation for the active class */
+.nav-list.active {
+  display: flex;
+  animation: fadeIn 0.8s ease forwards;
+  width: 103.5%;
+}
+
+/* Define animation for the menu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
     /* Hide the page content initially */
 
 
@@ -778,6 +800,7 @@ headin
 
   menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
+    navList.classList.toggle('animate-menu');
   });
 </script>
 
