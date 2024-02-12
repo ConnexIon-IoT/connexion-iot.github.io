@@ -69,8 +69,6 @@ nav a {
     background-color: #FFFFFF;
 }
 
-
-
 /* Styles for the menu toggle button */
 .menu-toggle {
     display: none;
@@ -109,8 +107,9 @@ nav a {
     max-height: 300px; /* Set the max-height to the desired height of the menu */
 }
 
-
-
+    .menu-toggle {
+        display: flex;
+    }
     .menu-toggle {
         display: flex;
     }
@@ -198,16 +197,34 @@ nav a {
 
 /* Media queries for responsive design */
 @media (max-width: 1200px) {
-    .event-card,
+    
     .event-card1 {
-        width: 100%;
+        margin-left: 35px !important;
+        margin-right: 35px  !important;
+        
+        width: 100% !important;
+    }
+    .event-card{
+        margin-left: -15px !important;
+        margin-right: -10px  !important;
+        
+        width: 100% !important;
     }
 }
 
 @media (max-width: 768px) {
-    .event-card,
+    
     .event-card1 {
-        width: 100%;
+        margin-left: 35px !important;
+        margin-right: 35px  !important;
+        
+        width: 100% !important;
+    }
+    .event-card {
+        margin-left: -15px !important;
+        margin-right: -10px  !important;
+        
+        width: 100% !important;
     }
 }
 .eventshead{
@@ -306,7 +323,7 @@ p {
  
   <div style="background-color: rgb(230, 220, 220); color: rgb(252, 10, 10); width: 100%; font-size: larger; padding-top: 8px; padding-bottom: 8px;">
         
-    <marquee style="font-weight: bold;" behavior="scroll" direction="left">Coming Soon!!!</marquee>
+    <marquee style="font-weight: bold;" behavior="scroll" direction="left">Tech Tales: Stages and Timelines</marquee>
 
   </div>
   <header class="eventshead">
@@ -318,30 +335,44 @@ p {
     <h2 style="text-align: center; font-size: 35px; font-weight: bold; color: #333;  ">Upcoming Events</h2>
       <section class="events">
           
-          <div class="event-card1">
-            <h3 style="text-align: center;">Intro Session for ConnexIon & IoT 2023</h3>
+          <div class="event-card1" style="width: 35%;">
+            <h3 style="text-align: center;">Tech Tales: Stages and Timelines</h3>
             <div class="row">
               <div class="event-image">
-                  <img src="images/event4.webp" alt="Event 4">
+                  <img style="height: 14rem;" src="images/TechTales_simple_banner.png" alt="Tech Tales">
               </div>
 
               <div class="event-details1">
                  
-                  <p>During this session, you'll:
+                
+                  
                       <ul>
-                          <li>Discover what makes ConnexIon unique.</li>
-                          <li>Learn about the upcoming events and initiatives.</li>
-                          <li>Meet fellow students who share your interests.</li>
-                          <li>Learn the basics of IoT.</li>
+                        <p style="margin-right:17rem; text-align: left; font-size: 1.1rem;">Stage:1</p>
+                        <p style="margin-right:1rem; color: black  ;font-weight: bold; font-size: 1.8rem;">Problem Statement Submission</p>
+                        <li style="text-align: left;"><span style="font-weight: bold; color: black;">Discription:</span> Participating teams are required to submit a presentation in PDF or PPTX containing their problem statement related to any of these fields - agriculture, healthcare and water management, proposed solution and the list of components along with their price to be bought (each team is allotted ₹2,500 for this. Arduino, NodeMCU and RaspberryPi will be provided).</li>
+                        <br>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Start:</span> 12th February 2024</li>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Time:</span> 4:00 PM IST</li>
+                          <br>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">End:</span> 23th February 2024</li>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Time:</span> 11:59 PM IST</li>
                       </ul>
-                  </p>
-                  <p>Event Details:
                       <ul>
-                          <li>Date: 28th August 2023</li>
-                          <li>Time: 5.45 PM</li>
-                          <li>Location: Room Number 115</li>
+                        <p style="margin-right:17rem; text-align: left; font-size: 1.1rem;">Stage:2</p>
+                        <p style="margin-right:1rem; color: black  ;font-weight: bold;font-size: 1.8rem;">Prototype Building</p>
+                        <li style="text-align: left;"><span style="font-weight: bold; color: black;">Discription:</span> Teams will be provided with their requested components along with an Arduino, 2 NodeMCUs and a RaspberryPi3 Model-B version 1.2 (2GB). This round is tentatively 36 hrs long and teams must finish their protypes within the specified duration.</li>
+                        <br>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Start:</span> 1st March 2024</li>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Time:</span> 2:00 PM IST</li>
+                          <br>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">End:</span> 3rd March 2024</li>
+                          <li style="text-align: left;"><span style="font-weight: bold; color: black;">Time:</span> 9:30 AM IST</li>
                       </ul>
-                  </p>
+                  
+                <div>
+                    Registration:  <a href="https://unstop.com/hackathons/tech-tales-abhisarga24-indian-institute-of-information-technology-iiit-sri-city-899679">Click here </a>
+                </div>
+                
               </div>
           </div>
         </div>
@@ -390,7 +421,7 @@ p {
       <div class="social-media">
         <h2>Follow us on social media:</h2>
         <ul class="fa-ul">
-          <li><a target="_blank" href="https://www.linkedin.com/company/connexion-the-iot-club/"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
           <!-- <li><a target="_blank" href="https://www.linkedin.com/in/connexion-iot-club-59410426a"><i class="fa fa-twitter"></i>Twitter</a></li> -->
           <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ=="><i class="fa fa-instagram"></i>Instagram</a></li>
           <!-- <li><a target="_blank" href="https://instagram.com/connexion_iiits?igshid=ZGUzMzM3NWJiOQ==" ><i class="fa fa-facebook"></i>Facebook</a></li> -->
@@ -413,12 +444,13 @@ p {
   </footer>
 
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
+const menuToggle = document.getElementById('menu-toggle');
 const navList = document.querySelector('.nav-list');
 
 menuToggle.addEventListener('click', () => {
-navList.classList.toggle('active');
+    navList.classList.toggle('active');
 });
+
 
 </script>
 </body>
